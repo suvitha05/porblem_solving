@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.HashMap;
+
+class Main
+{
+	public static void main(String[] args) {
+		Scanner ob = new Scanner(System.in);
+		String str = ob.nextLine();
+		HashMap<Character, Integer> freq = new HashMap<>();
+		for(char ch : str.toCharArray())
+		{
+		    freq.put(ch, freq.getOrDefault(ch, 0)+1);
+		}
+		for(Map.Entry<Character,Integer> entry : freq.entrySet())
+		{
+		    System.out.println(entry.getKey()+":"+entry.getValue());
+		}
+	}
+}
